@@ -1,5 +1,8 @@
 namespace SunamoWf.Controls;
 
+    /// <summary>
+    /// Simple login dialog with login, password and a remember-password option.
+    /// </summary>
     public partial class DialogLogin : Form
     {
         //bool publicSaveLogic = false;
@@ -30,6 +33,9 @@ namespace SunamoWf.Controls;
         //    }
         //}
 
+        /// <summary>
+        /// Handles the first button click.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             //    if (publicSaveLogic)
@@ -58,6 +64,9 @@ namespace SunamoWf.Controls;
             //    }
             }
 
+        /// <summary>
+        /// Handles the second button click.
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult = System.Windows.Forms.DialogResult.Cancel;

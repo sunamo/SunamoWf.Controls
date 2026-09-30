@@ -1,12 +1,21 @@
 namespace SunamoWf.Controls;
 
+    /// <summary>
+    /// Small dialog with a label and a text box that closes with OK on Enter.
+    /// </summary>
     public class EnterValueForm : Form
     {
 
         private Button button1;
+        /// <summary>
+        /// The text box for the entered value.
+        /// </summary>
         public TextBox TextBox1;
         private Label label1;
 
+        /// <summary>
+        /// Creates and lays out the controls of the form.
+        /// </summary>
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
@@ -55,12 +64,18 @@ namespace SunamoWf.Controls;
 
         }
 
+        /// <summary>
+        /// Creates the dialog and wires the Enter handling.
+        /// </summary>
         public EnterValueForm()
         {
             InitializeComponent();
             TextBox1.KeyDown += new KeyEventHandler(TextBox1_KeyDown);
         }
 
+        /// <summary>
+        /// Passes closing to the base form.
+        /// </summary>
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
@@ -68,6 +83,9 @@ namespace SunamoWf.Controls;
 
         }
 
+        /// <summary>
+        /// Confirms the dialog when Enter is pressed.
+        /// </summary>
         void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -77,9 +95,8 @@ namespace SunamoWf.Controls;
         }
 
         /// <summary>
-        /// Do A1 zadejte hondotu bez dvojtecky - pripoji se sama a zadejte na zacatku.
+        /// Creates the dialog with the given caption (without colon).
         /// </summary>
-        /// <param name="label"></param>
         public EnterValueForm(string label)
             : this()
         {
@@ -88,6 +105,9 @@ namespace SunamoWf.Controls;
 
         }
 
+        /// <summary>
+        /// Handles the first button click.
+        /// </summary>
         private void button1_Click(object sender, System.EventArgs e)
         {
 

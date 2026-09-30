@@ -1,4 +1,7 @@
 namespace SunamoWf.Controls;
+/// <summary>
+/// Dialog asking for an old and a new integer value to replace.
+/// </summary>
 public class ReplaceInt : Form
     {
         private Label label2;
@@ -10,6 +13,9 @@ public class ReplaceInt : Form
 
         private Label label1;
 
+        /// <summary>
+        /// The old value entered by the user.
+        /// </summary>
         public int OldValue
         {
             get
@@ -18,6 +24,9 @@ public class ReplaceInt : Form
             }
         }
 
+        /// <summary>
+        /// The new value entered by the user.
+        /// </summary>
         public int NewValue
         {
             get
@@ -26,6 +35,9 @@ public class ReplaceInt : Form
             }
         }
 
+        /// <summary>
+        /// Creates the dialog with optional captions and initial values.
+        /// </summary>
         public ReplaceInt(ReplaceArgs ra, string whatSearchAndReplace, string old, string novy)
         {
             InitializeComponent();
@@ -51,6 +63,9 @@ public class ReplaceInt : Form
             numberTextBoxForms2.Text = novy.ToString();
         }
 
+        /// <summary>
+        /// Creates and lays out the controls of the form.
+        /// </summary>
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
@@ -144,16 +159,25 @@ public class ReplaceInt : Form
 
         }
 
+        /// <summary>
+        /// Load handler (no additional initialization needed).
+        /// </summary>
         private void ResizeImages_Load(object sender, System.EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Handles the first button click.
+        /// </summary>
         private void button1_Click(object sender, System.EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
         }
 
+        /// <summary>
+        /// Handles the second button click.
+        /// </summary>
         private void button2_Click(object sender, System.EventArgs e)
         {
             if (NewValue != OldValue)

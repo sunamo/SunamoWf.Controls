@@ -3,6 +3,9 @@ namespace SunamoWf.Controls;
 
 
 
+/// <summary>
+/// Simple browser window with back, next, reload, home, close and custom buttons.
+/// </summary>
 public partial class WebBrowserWF : Form
     {
         Uri uri = null;
@@ -10,13 +13,25 @@ public partial class WebBrowserWF : Form
         bool canGoNext = false;
         List<Uri> lastUri = new List<Uri>();
         int actualIndex = 0;
+        /// <summary>
+        /// Raised when the custom button is clicked.
+        /// </summary>
         public event UriEventHandler CustomButtonClick;
+        /// <summary>
+        /// Raised when the close button is clicked.
+        /// </summary>
         public event Action CloseButtonClick;
         string homeAdressWithoutHttp = null;
+        /// <summary>
+        /// Raised when a navigation has completed.
+        /// </summary>
         public event WebBrowserNavigatedEventHandler LoadCompleted;
         bool reload = false;
         List<bool> backnext = new List<bool>();
 
+        /// <summary>
+        /// Creates the window with the custom button text and home address.
+        /// </summary>
         public WebBrowserWF(string TextCustomButton, string homeAdressWithoutHttp)
         {
             InitializeComponent();
@@ -44,6 +59,9 @@ public partial class WebBrowserWF : Form
             //NavigateHome();
         }
 
+        /// <summary>
+        /// Handles completed navigation of the embedded browser.
+        /// </summary>
         void webView_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             //if (!reload)
@@ -83,6 +101,9 @@ public partial class WebBrowserWF : Form
         //    btnCustom.Image = DrawingImagesHelper.MsAppx(!enable, AppPics.BoardPin);
         //}
 
+        /// <summary>
+        /// Navigates one step back in the history.
+        /// </summary>
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             if (canGoBack)
@@ -94,6 +115,9 @@ public partial class WebBrowserWF : Form
             }
         }
 
+        /// <summary>
+        /// Navigates one step forward in the history.
+        /// </summary>
         private void btnNext_Click_1(object sender, EventArgs e)
         {
             if (canGoNext)
@@ -105,6 +129,9 @@ public partial class WebBrowserWF : Form
             }
         }
 
+        /// <summary>
+        /// Reloads the current address.
+        /// </summary>
         private void btnReload_Click_1(object sender, EventArgs e)
         {
             reload = true;
@@ -112,6 +139,9 @@ public partial class WebBrowserWF : Form
             webView.Navigate(uri);
         }
 
+        /// <summary>
+        /// Clears the history and navigates home.
+        /// </summary>
         private void btnHome_Click_1(object sender, EventArgs e)
         {
             reload = true;
@@ -121,6 +151,9 @@ public partial class WebBrowserWF : Form
             NavigateHome();
         }
 
+        /// <summary>
+        /// Navigates to the home address.
+        /// </summary>
         private void NavigateHome()
         {
             reload = false;
@@ -128,16 +161,25 @@ public partial class WebBrowserWF : Form
             webView.Navigate(new Uri("http://" + homeAdressWithoutHttp));
         }
 
+        /// <summary>
+        /// Raises CustomButtonClick with the current address.
+        /// </summary>
         private void btnCustom_Click_1(object sender, EventArgs e)
         {
             CustomButtonClick(webView, new UriEventArgs(uri));
         }
 
+        /// <summary>
+        /// Raises CloseButtonClick.
+        /// </summary>
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             CloseButtonClick();
         }
 
+        /// <summary>
+        /// Navigates to the typed address when Enter is pressed.
+        /// </summary>
         private void txtAddress_KeyUp_1(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)

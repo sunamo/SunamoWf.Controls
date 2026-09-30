@@ -2,6 +2,9 @@ namespace SunamoWf.Controls;
 
 
 
+/// <summary>
+/// User control showing one or two texts (second in a collapsible panel).
+/// </summary>
 public class DisplayTextUC : UserControl
 {
     SplitContainer sc = new SplitContainer();
@@ -9,10 +12,8 @@ public class DisplayTextUC : UserControl
     TextBoxForms txt2 = new TextBoxForms();
 
     /// <summary>
-    /// Kdyz A2 will be null, Panel2 will be collapsed
+    /// Creates the control; when text2 is null the second panel is not created.
     /// </summary>
-    /// <param name="text"></param>
-    /// <param name="text2"></param>
     public DisplayTextUC(string text, string text2)
     {
         this.SuspendLayout();
@@ -54,7 +55,7 @@ public class DisplayTextUC : UserControl
     }
 
     /// <summary>
-    /// Nastavuje text pomoci Invoke
+    /// Gets or sets the text of the first box, marshalled to the UI thread.
     /// </summary>
     public string Content
     {
@@ -69,6 +70,9 @@ public class DisplayTextUC : UserControl
         }
     } 
 
+    /// <summary>
+    /// Keeps the split container divided evenly after the form is resized.
+    /// </summary>
     protected override void OnResize(System.EventArgs e)
     {
         base.OnResize(e);

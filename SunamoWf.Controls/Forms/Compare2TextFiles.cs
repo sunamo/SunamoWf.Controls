@@ -1,4 +1,7 @@
 namespace SunamoWf.Controls;
+/// <summary>
+/// Dialog showing two texts side by side and letting the user keep the left one, the right one or merge them.
+/// </summary>
 public class Compare2TextFiles : Form
     {
         private Label label1;
@@ -9,6 +12,9 @@ public class Compare2TextFiles : Form
         private TextBoxForms textBox2;
         private SplitContainer splitContainer1;
 
+        /// <summary>
+        /// Creates and lays out the controls of the form.
+        /// </summary>
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -124,9 +130,7 @@ public class Compare2TextFiles : Form
         }
 
         /// <summary>
-        /// Left - Yes
-        /// Merge = OK
-        /// Right - No
+        /// Creates the dialog. Result: Yes keeps left, No keeps right, OK merges.
         /// </summary>
         public Compare2TextFiles(string textLeft, string textRight)
         {
@@ -137,9 +141,8 @@ public class Compare2TextFiles : Form
         }
 
         /// <summary>
-        /// 
+        /// Keeps the split container divided evenly after the form is resized.
         /// </summary>
-        /// <param name="e"></param>
         protected override void OnResize(System.EventArgs e)
         {
             base.OnResize(e);
@@ -149,16 +152,25 @@ public class Compare2TextFiles : Form
 
         }
 
+        /// <summary>
+        /// Handles the second button click.
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Yes;
         }
 
+        /// <summary>
+        /// Handles the third button click.
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
         }
 
+        /// <summary>
+        /// Handles the first button click.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.No;

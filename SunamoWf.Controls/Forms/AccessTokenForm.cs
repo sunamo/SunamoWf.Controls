@@ -1,29 +1,44 @@
 namespace SunamoWf.Controls;
 
+    /// <summary>
+    /// Dialog that lets the user pick a browser to open an OAuth address and paste the returned access token.
+    /// </summary>
     public class AccessTokenForm : Form
     {
                 private Button button1;
         private Button button2;
         string uri = "";
+        ComboBoxEnumHelper<Browsers> browserHelper;
 
+        /// <summary>
+        /// Creates the dialog for the given OAuth address.
+        /// </summary>
         public AccessTokenForm(string uri)
         {
             this.uri = uri;
             InitializeComponent();
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            foreach (string name in Enum.GetNames(typeof(Browsers))) comboBox1.Items.Add(name);
-            comboBox1.SelectedItem = Browsers.Opera.ToString();
+            browserHelper = new ComboBoxEnumHelper<Browsers>(comboBox1);
+            browserHelper.SetSelected(Browsers.Opera);
             comboBox1.SelectedIndexChanged += new System.EventHandler(comboBox1_SelectedIndexChanged);
         }
 
+        /// <summary>
+        /// Callback invoked to open the address in the selected browser.
+        /// </summary>
         public static Action<Browsers, string> openInBrowser = null;
 
+        /// <summary>
+        /// Opens the address in the newly selected browser.
+        /// </summary>
         void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            openInBrowser?.Invoke((Browsers)Enum.Parse(typeof(Browsers), comboBox1.SelectedItem.ToString()), uri);
+            openInBrowser?.Invoke(browserHelper.GetSelected(), uri);
 
         }
 
+        /// <summary>
+        /// The access token pasted by the user.
+        /// </summary>
         public string AccessToken
         {
             get
@@ -37,6 +52,9 @@ namespace SunamoWf.Controls;
         private Label label2;
         private TextBox textBox1;
 
+        /// <summary>
+        /// Creates and lays out the controls of the form.
+        /// </summary>
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
@@ -115,6 +133,9 @@ namespace SunamoWf.Controls;
 
         }
 
+        /// <summary>
+        /// Handles the first button click.
+        /// </summary>
         private void button1_Click(object sender, System.EventArgs e)
         {
             if (textBox1.Text != "")
@@ -127,6 +148,9 @@ namespace SunamoWf.Controls;
             }
         }
 
+        /// <summary>
+        /// Handles the second button click.
+        /// </summary>
         private void button2_Click(object sender, System.EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

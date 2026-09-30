@@ -2,11 +2,14 @@ using System.ComponentModel;
 namespace SunamoWf.Controls;
 
     /// <summary>
-    /// Jednoduche okno s popiskem a text. polem. 
+    /// Small window with a label and a text box that raises an event when Enter is pressed.
     /// </summary>
     public partial class EnterValueEventForm : Form
     {
         private Button button1;
+        /// <summary>
+        /// The text box for the entered value.
+        /// </summary>
         public TextBox TextBox1;
         private Label label1;
 
@@ -17,9 +20,8 @@ namespace SunamoWf.Controls;
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Releases resources used by the form.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -32,8 +34,7 @@ namespace SunamoWf.Controls;
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Creates and lays out the controls of the form.
         /// </summary>
         private void InitializeComponent()
         {
@@ -91,12 +92,12 @@ namespace SunamoWf.Controls;
         #endregion
 
         /// <summary>
-        /// Po stisku entru.
+        /// Raised with the entered text after Enter is pressed.
         /// </summary>
         public event Action<string> Zadani;
 
         /// <summary>
-        /// IK, WF.
+        /// Creates the form and wires the Enter handling.
         /// </summary>
         public EnterValueEventForm()
         {
@@ -108,20 +109,16 @@ namespace SunamoWf.Controls;
         }
 
         /// <summary>
-        /// Zakaze zavreni pres krizek.
+        /// Prevents closing the form with the close button.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void SMText_Closing(object sender, CancelEventArgs e)
         {
             e.Cancel = true;
         }
 
         /// <summary>
-        /// Pokud byl stisknut enter, vyvola udalost.
+        /// Hides the form and raises Zadani after Enter is pressed.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void VyvolejUdalostPoEntru(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
@@ -135,6 +132,9 @@ namespace SunamoWf.Controls;
             }
         }
 
+        /// <summary>
+        /// Hides the form and sets DialogResult to OK.
+        /// </summary>
         private void SkryjForm()
         {
             DialogResult = DialogResult.OK;
@@ -142,9 +142,8 @@ namespace SunamoWf.Controls;
         }
 
         /// <summary>
-        /// Do A1 zadejte hondotu bez dvojtecky - pripoji se sama a zadejte na zacatku.
+        /// Creates the form with the given caption (without colon).
         /// </summary>
-        /// <param name="label"></param>
         public EnterValueEventForm(string label)
             : this()
         {
@@ -153,10 +152,8 @@ namespace SunamoWf.Controls;
         }
 
         /// <summary>
-        /// 
+        /// Handles the first button click.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             SkryjForm();
