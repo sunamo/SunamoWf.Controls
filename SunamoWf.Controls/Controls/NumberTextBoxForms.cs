@@ -22,7 +22,7 @@ public class NumberTextBoxForms : TextBoxForms
     {
         if ((min > max) || min < 0 || max < 0)
         {
-            ThrowEx.Custom("Minimum and maximum values are not supported");
+            throw new ArgumentException("Minimum and maximum values are not supported");
         }
         _min = min;
         _max = max;

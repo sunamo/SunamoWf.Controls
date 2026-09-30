@@ -27,7 +27,4 @@
     <PackageReleaseNotes>y</PackageReleaseNotes>
     <NoWarn>CS0649;CA1416;CS8625;CS8618;CS8600;CS8602;CS8604;CS8603;CS8601;CS8629;CS8714;CS8622;CS0108;CS8612;CS0618;CS8073;CS0067;WFO1000</NoWarn>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="SunamoExceptions" Version="26.7.28.1" />
-  </ItemGroup>
 </Project>
