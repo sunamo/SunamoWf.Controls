@@ -38,9 +38,9 @@ public class DisplayImageUC : UserControl
         /// <summary>
         /// Keeps the split container divided evenly after the form is resized.
         /// </summary>
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(System.EventArgs eventArgs)
         {
-            base.OnResize(e);
+            base.OnResize(eventArgs);
 
             // Pro jistotu to je nastavene na vyssi nez 200
             if (ClientSize.Width > 210)

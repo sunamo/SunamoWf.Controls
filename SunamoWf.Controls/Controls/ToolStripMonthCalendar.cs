@@ -75,11 +75,11 @@ public class ToolStripMonthCalendar : ToolStripControlHost
     /// </summary>
     public event DateRangeEventHandler DateChanged;
 
-    private void OnDateChanged(object sender, DateRangeEventArgs e)
+    private void OnDateChanged(object sender, DateRangeEventArgs eventArgs)
     {
         if (DateChanged != null)
         {
-            DateChanged(this, e);
+            DateChanged(this, eventArgs);
         }
     }
 }

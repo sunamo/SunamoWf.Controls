@@ -62,7 +62,7 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Handles completed navigation of the embedded browser.
         /// </summary>
-        void webView_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        void webView_Navigated(object sender, WebBrowserNavigatedEventArgs eventArgs)
         {
             //if (!reload)
             //{
@@ -104,7 +104,7 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Navigates one step back in the history.
         /// </summary>
-        private void btnBack_Click_1(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs eventArgs)
         {
             if (canGoBack)
             {
@@ -118,7 +118,7 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Navigates one step forward in the history.
         /// </summary>
-        private void btnNext_Click_1(object sender, EventArgs e)
+        private void btnNext_Click_1(object sender, EventArgs eventArgs)
         {
             if (canGoNext)
             {
@@ -132,7 +132,7 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Reloads the current address.
         /// </summary>
-        private void btnReload_Click_1(object sender, EventArgs e)
+        private void btnReload_Click_1(object sender, EventArgs eventArgs)
         {
             reload = true;
             backnext.Add(false);
@@ -142,7 +142,7 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Clears the history and navigates home.
         /// </summary>
-        private void btnHome_Click_1(object sender, EventArgs e)
+        private void btnHome_Click_1(object sender, EventArgs eventArgs)
         {
             reload = true;
             backnext.Clear();
@@ -164,7 +164,7 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Raises CustomButtonClick with the current address.
         /// </summary>
-        private void btnCustom_Click_1(object sender, EventArgs e)
+        private void btnCustom_Click_1(object sender, EventArgs eventArgs)
         {
             CustomButtonClick(webView, new UriEventArgs(uri));
         }
@@ -172,7 +172,7 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Raises CloseButtonClick.
         /// </summary>
-        private void btnClose_Click_1(object sender, EventArgs e)
+        private void btnClose_Click_1(object sender, EventArgs eventArgs)
         {
             CloseButtonClick();
         }
@@ -180,9 +180,9 @@ public partial class WebBrowserWF : Form
         /// <summary>
         /// Navigates to the typed address when Enter is pressed.
         /// </summary>
-        private void txtAddress_KeyUp_1(object sender, KeyEventArgs e)
+        private void txtAddress_KeyUp_1(object sender, KeyEventArgs eventArgs)
         {
-            if (e.KeyData == Keys.Enter)
+            if (eventArgs.KeyData == Keys.Enter)
             {
                 Uri uriOut = null;
                 if (Uri.TryCreate(txtAddress.Text, UriKind.Absolute, out uriOut))

@@ -76,9 +76,9 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Passes closing to the base form.
         /// </summary>
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs eventArgs)
         {
-            base.OnFormClosing(e);
+            base.OnFormClosing(eventArgs);
 
 
         }
@@ -86,9 +86,9 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Confirms the dialog when Enter is pressed.
         /// </summary>
-        void TextBox1_KeyDown(object sender, KeyEventArgs e)
+        void TextBox1_KeyDown(object sender, KeyEventArgs eventArgs)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (eventArgs.KeyCode == Keys.Enter)
             {
                 DialogResult = DialogResult.OK;
             }
@@ -108,7 +108,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the first button click.
         /// </summary>
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, System.EventArgs eventArgs)
         {
 
             DialogResult = DialogResult.OK;

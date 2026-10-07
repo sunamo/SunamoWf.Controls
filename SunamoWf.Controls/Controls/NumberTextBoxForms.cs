@@ -30,14 +30,14 @@ public class NumberTextBoxForms : TextBoxForms
     }
 
     /// <inheritdoc/>
-    protected override void OnKeyPress(KeyPressEventArgs e)
+    protected override void OnKeyPress(KeyPressEventArgs eventArgs)
     {
         _previousText = this.Text;
-        e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        eventArgs.Handled = !char.IsDigit(eventArgs.KeyChar) && !char.IsControl(eventArgs.KeyChar);
     }
 
     /// <inheritdoc/>
-    protected override void OnTextChanged(EventArgs e)
+    protected override void OnTextChanged(EventArgs eventArgs)
     {
         if (this.Text == string.Empty)
         {
@@ -77,7 +77,7 @@ public class NumberTextBoxForms : TextBoxForms
     }
 
     /// <inheritdoc/>
-    protected override void OnLeave(EventArgs e)
+    protected override void OnLeave(EventArgs eventArgs)
     {
         int number;
         if (!int.TryParse(this.Text, out number) || number < _min || number > _max)

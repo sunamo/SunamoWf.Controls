@@ -19,9 +19,9 @@ public class ColorButton : Button
     public event VoidColor ColorChanged;
 
     /// <inheritdoc/>
-    protected override void OnClick(EventArgs e)
+    protected override void OnClick(EventArgs eventArgs)
     {
-        base.OnClick(e);
+        base.OnClick(eventArgs);
 
         ColorDialog colorDialog = new ColorDialog();
         colorDialog.SolidColorOnly = true;

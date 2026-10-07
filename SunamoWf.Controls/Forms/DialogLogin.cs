@@ -36,7 +36,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the first button click.
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs eventArgs)
         {
             //    if (publicSaveLogic)
             //    {
@@ -67,7 +67,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the second button click.
         /// </summary>
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs eventArgs)
         {
             DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }

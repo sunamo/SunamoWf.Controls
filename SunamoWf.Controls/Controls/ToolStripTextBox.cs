@@ -6,13 +6,13 @@ namespace SunamoWf.Controls;
 public class ToolStripTextBox : System.Windows.Forms.ToolStripTextBox
 {
     /// <inheritdoc/>
-    protected override void OnKeyUp(KeyEventArgs e)
+    protected override void OnKeyUp(KeyEventArgs eventArgs)
     {
-        base.OnKeyUp(e);
+        base.OnKeyUp(eventArgs);
 
-        if (e.Control)
+        if (eventArgs.Control)
         {
-            if (e.KeyCode == Keys.A)
+            if (eventArgs.KeyCode == Keys.A)
             {
                 this.SelectAll();
             }

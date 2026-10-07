@@ -31,11 +31,11 @@ public class ComboBoxEnumHelper<T>
     /// </summary>
     public void SetSelected(T value)
     {
-        for (int i = 0; i < comboBox.Items.Count; i++)
+        for (int index = 0; index < comboBox.Items.Count; index++)
         {
-            if (comboBox.Items[i].ToString() == value.ToString())
+            if (comboBox.Items[index].ToString() == value.ToString())
             {
-                comboBox.SelectedIndex = i;
+                comboBox.SelectedIndex = index;
                 break;
             }
         }

@@ -73,9 +73,9 @@ public class DisplayTextUC : UserControl
     /// <summary>
     /// Keeps the split container divided evenly after the form is resized.
     /// </summary>
-    protected override void OnResize(System.EventArgs e)
+    protected override void OnResize(System.EventArgs eventArgs)
     {
-        base.OnResize(e);
+        base.OnResize(eventArgs);
         if (true)
         {
             // Pro jistotu to je nastavene na vyssi nez 200

@@ -22,4 +22,4 @@ public class UriEventArgs : EventArgs
 /// <summary>
 /// Handler for events that carry a Uri.
 /// </summary>
-public delegate void UriEventHandler(object sender, UriEventArgs e);
+public delegate void UriEventHandler(object sender, UriEventArgs eventArgs);
