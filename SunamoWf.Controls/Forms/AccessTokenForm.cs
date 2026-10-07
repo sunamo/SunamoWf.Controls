@@ -30,7 +30,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Opens the address in the newly selected browser.
         /// </summary>
-        void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        void comboBox1_SelectedIndexChanged(object sender, System.EventArgs eventArgs)
         {
             openInBrowser?.Invoke(browserHelper.GetSelected(), uri);
 
@@ -136,7 +136,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the first button click.
         /// </summary>
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, System.EventArgs eventArgs)
         {
             if (textBox1.Text != "")
             {
@@ -151,7 +151,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the second button click.
         /// </summary>
-        private void button2_Click(object sender, System.EventArgs e)
+        private void button2_Click(object sender, System.EventArgs eventArgs)
         {
             DialogResult = DialogResult.Cancel;
         }

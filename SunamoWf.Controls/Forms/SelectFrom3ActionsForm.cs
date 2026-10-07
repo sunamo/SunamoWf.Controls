@@ -23,7 +23,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the third button click.
         /// </summary>
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs eventArgs)
         {
             DialogResult = DialogResult.Yes;
         }
@@ -31,7 +31,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the second button click.
         /// </summary>
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs eventArgs)
         {
             DialogResult = DialogResult.No;
         }
@@ -39,7 +39,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the first button click.
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs eventArgs)
         {
             DialogResult = DialogResult.Cancel;
         }

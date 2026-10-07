@@ -111,17 +111,17 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Prevents closing the form with the close button.
         /// </summary>
-        void SMText_Closing(object sender, CancelEventArgs e)
+        void SMText_Closing(object sender, CancelEventArgs eventArgs)
         {
-            e.Cancel = true;
+            eventArgs.Cancel = true;
         }
 
         /// <summary>
         /// Hides the form and raises Zadani after Enter is pressed.
         /// </summary>
-        void VyvolejUdalostPoEntru(object sender, KeyEventArgs e)
+        void VyvolejUdalostPoEntru(object sender, KeyEventArgs eventArgs)
         {
-            if (e.KeyData == Keys.Enter)
+            if (eventArgs.KeyData == Keys.Enter)
             {
                 SkryjForm();
 
@@ -154,7 +154,7 @@ namespace SunamoWf.Controls;
         /// <summary>
         /// Handles the first button click.
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs eventArgs)
         {
             SkryjForm();
         }

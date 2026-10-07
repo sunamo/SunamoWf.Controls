@@ -8,14 +8,14 @@ public class AlphaNumericTextBox : TextBoxForms
     private string _previousText;
 
     /// <inheritdoc/>
-    protected override void OnKeyPress(KeyPressEventArgs e)
+    protected override void OnKeyPress(KeyPressEventArgs eventArgs)
     {
         _previousText = this.Text;
-        e.Handled = !char.IsWhiteSpace(e.KeyChar);
+        eventArgs.Handled = !char.IsWhiteSpace(eventArgs.KeyChar);
     }
 
     /// <inheritdoc/>
-    protected override void OnTextChanged(EventArgs e)
+    protected override void OnTextChanged(EventArgs eventArgs)
     {
     }
 
@@ -36,7 +36,7 @@ public class AlphaNumericTextBox : TextBoxForms
     }
 
     /// <inheritdoc/>
-    protected override void OnLeave(EventArgs e)
+    protected override void OnLeave(EventArgs eventArgs)
     {
     }
 }

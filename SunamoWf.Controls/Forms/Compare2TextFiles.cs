@@ -143,9 +143,9 @@ public class Compare2TextFiles : Form
         /// <summary>
         /// Keeps the split container divided evenly after the form is resized.
         /// </summary>
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(System.EventArgs eventArgs)
         {
-            base.OnResize(e);
+            base.OnResize(eventArgs);
 
             splitContainer1.SplitterDistance = splitContainer1.Width - 4 / 2;
 
@@ -155,7 +155,7 @@ public class Compare2TextFiles : Form
         /// <summary>
         /// Handles the second button click.
         /// </summary>
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs eventArgs)
         {
             DialogResult = DialogResult.Yes;
         }
@@ -163,7 +163,7 @@ public class Compare2TextFiles : Form
         /// <summary>
         /// Handles the third button click.
         /// </summary>
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs eventArgs)
         {
             DialogResult = DialogResult.OK;
         }
@@ -171,7 +171,7 @@ public class Compare2TextFiles : Form
         /// <summary>
         /// Handles the first button click.
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs eventArgs)
         {
             DialogResult = DialogResult.No;
         }

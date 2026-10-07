@@ -38,23 +38,23 @@ public class ReplaceInt : Form
         /// <summary>
         /// Creates the dialog with optional captions and initial values.
         /// </summary>
-        public ReplaceInt(ReplaceArgs ra, string whatSearchAndReplace, string old, string novy)
+        public ReplaceInt(ReplaceArgs replaceArgs, string whatSearchAndReplace, string old, string novy)
         {
             InitializeComponent();
 
-            if (ra != null)
+            if (replaceArgs != null)
             {
-                if (!string.IsNullOrEmpty(ra.initialMessage))
+                if (!string.IsNullOrEmpty(replaceArgs.initialMessage))
                 {
-                    label1.Text = ra.initialMessage;
+                    label1.Text = replaceArgs.initialMessage;
                 }
-                if (!string.IsNullOrEmpty(ra.lblOldValue))
+                if (!string.IsNullOrEmpty(replaceArgs.lblOldValue))
                 {
-                    label2.Text = ra.lblOldValue;
+                    label2.Text = replaceArgs.lblOldValue;
                 }
-                if (!string.IsNullOrEmpty(ra.lblNewValue))
+                if (!string.IsNullOrEmpty(replaceArgs.lblNewValue))
                 {
-                    label3.Text = ra.lblNewValue;
+                    label3.Text = replaceArgs.lblNewValue;
                 }
             }
 
@@ -162,7 +162,7 @@ public class ReplaceInt : Form
         /// <summary>
         /// Load handler (no additional initialization needed).
         /// </summary>
-        private void ResizeImages_Load(object sender, System.EventArgs e)
+        private void ResizeImages_Load(object sender, System.EventArgs eventArgs)
         {
 
         }
@@ -170,7 +170,7 @@ public class ReplaceInt : Form
         /// <summary>
         /// Handles the first button click.
         /// </summary>
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, System.EventArgs eventArgs)
         {
             DialogResult = DialogResult.Cancel;
         }
@@ -178,7 +178,7 @@ public class ReplaceInt : Form
         /// <summary>
         /// Handles the second button click.
         /// </summary>
-        private void button2_Click(object sender, System.EventArgs e)
+        private void button2_Click(object sender, System.EventArgs eventArgs)
         {
             if (NewValue != OldValue)
             {

@@ -19,9 +19,9 @@ public class ToolStripDropDownButtonMonthCalendar : ToolStripDropDownButton
         DropDownItems.Add(MonthCalendar);
     }
 
-    private void MonthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+    private void MonthCalendar_DateChanged(object sender, DateRangeEventArgs eventArgs)
     {
-        OnDateChanged(sender, e);
+        OnDateChanged(sender, eventArgs);
     }
 
     /// <summary>
@@ -52,11 +52,11 @@ public class ToolStripDropDownButtonMonthCalendar : ToolStripDropDownButton
     /// </summary>
     public event DateRangeEventHandler DateChanged;
 
-    private void OnDateChanged(object sender, DateRangeEventArgs e)
+    private void OnDateChanged(object sender, DateRangeEventArgs eventArgs)
     {
         if (DateChanged != null)
         {
-            DateChanged(this, e);
+            DateChanged(this, eventArgs);
         }
     }
 }

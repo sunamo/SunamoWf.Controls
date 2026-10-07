@@ -29,12 +29,12 @@ public class ComboBoxEnum<T> : ComboBox
     /// </summary>
     public void SetSelected(T value)
     {
-        for (int i = 0; i < Items.Count; i++)
+        for (int index = 0; index < Items.Count; index++)
         {
-            string itemText = Items[i].ToString();
+            string itemText = Items[index].ToString();
             if (itemText == value.ToString())
             {
-                SelectedIndex = i;
+                SelectedIndex = index;
                 break;
             }
         }
