@@ -6,7 +6,7 @@
     <RootNamespace>SunamoWf</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <Description>WinForms controls extracted from sunamo.wf</Description>
-    <Version>26.9.30.2</Version>
+    <Version>26.10.7.4</Version>
     <Authors>www.sunamo.cz</Authors>
     <Copyright>www.sunamo.cz</Copyright>
     <PackageProjectUrl>https://sunamo.github.io/PlatformIndependentNuGetPackages/SunamoWf.Controls/</PackageProjectUrl>
