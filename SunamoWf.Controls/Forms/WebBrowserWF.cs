@@ -1,7 +1,6 @@
+namespace SunamoWf.Forms;
+
 using System.Collections.Generic;
-namespace SunamoWf.Controls;
-
-
 
 /// <summary>
 /// Simple browser window with back, next, reload, home, close and custom buttons.

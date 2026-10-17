@@ -1,4 +1,4 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
 /// <summary>
 /// Event data carrying a Uri.

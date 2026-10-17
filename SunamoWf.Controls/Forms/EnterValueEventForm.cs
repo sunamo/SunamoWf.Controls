@@ -1,9 +1,7 @@
-using System.ComponentModel;
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
-    /// <summary>
-    /// Small window with a label and a text box that raises an event when Enter is pressed.
-    /// </summary>
+using System.ComponentModel;
+
     public partial class EnterValueEventForm : Form
     {
         private Button button1;

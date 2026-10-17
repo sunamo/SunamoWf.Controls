@@ -1,8 +1,5 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
-    /// <summary>
-    /// Small dialog with a label and a text box that closes with OK on Enter.
-    /// </summary>
     public class EnterValueForm : Form
     {
 

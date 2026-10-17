@@ -1,4 +1,4 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
 /// <summary>
 /// Optional captions for the ReplaceInt dialog.

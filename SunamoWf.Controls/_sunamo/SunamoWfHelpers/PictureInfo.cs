@@ -1,6 +1,6 @@
-using System.Text;
+namespace SunamoWf._sunamo.SunamoWfHelpers;
 
-namespace SunamoWf.Controls._sunamo.SunamoWfHelpers;
+using System.Text;
 
 /// <summary>
 /// Minimal picture description helper used by DisplayImageUC.
