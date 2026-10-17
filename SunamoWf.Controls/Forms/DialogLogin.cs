@@ -1,8 +1,5 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
-    /// <summary>
-    /// Simple login dialog with login, password and a remember-password option.
-    /// </summary>
     public partial class DialogLogin : Form
     {
         //bool publicSaveLogic = false;

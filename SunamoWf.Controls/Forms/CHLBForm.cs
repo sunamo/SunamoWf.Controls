@@ -1,9 +1,5 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
-    // Nemuze byt genericky protoze bych to musel dat jak tu tak do Designer
-    /// <summary>
-    /// Dialog showing a label and a CheckedListBox.
-    /// </summary>
     public partial class CHLBForm : Form
     {
 

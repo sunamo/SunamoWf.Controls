@@ -1,4 +1,4 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf;
 
 /// <summary>
 /// Raised when a color-related event occurs (e.g. ColorButton.ColorChanged).

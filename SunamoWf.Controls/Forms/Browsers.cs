@@ -1,4 +1,4 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
 /// <summary>
 /// Browsers offered by AccessTokenForm for opening an OAuth address.

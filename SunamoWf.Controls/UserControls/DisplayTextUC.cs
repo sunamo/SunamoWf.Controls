@@ -1,6 +1,4 @@
-namespace SunamoWf.Controls;
-
-
+namespace SunamoWf.UserControls;
 
 /// <summary>
 /// User control showing one or two texts (second in a collapsible panel).

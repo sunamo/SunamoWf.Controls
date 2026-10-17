@@ -1,6 +1,4 @@
-namespace SunamoWf.Controls;
-
-
+namespace SunamoWf.UserControls;
 
 /// <summary>
 /// User control showing an image next to a text with its basic info.

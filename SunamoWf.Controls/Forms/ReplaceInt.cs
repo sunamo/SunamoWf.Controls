@@ -1,4 +1,5 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
+
 /// <summary>
 /// Dialog asking for an old and a new integer value to replace.
 /// </summary>

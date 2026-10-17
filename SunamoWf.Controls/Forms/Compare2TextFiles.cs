@@ -1,4 +1,5 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
+
 /// <summary>
 /// Dialog showing two texts side by side and letting the user keep the left one, the right one or merge them.
 /// </summary>

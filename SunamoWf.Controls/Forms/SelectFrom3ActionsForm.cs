@@ -1,8 +1,5 @@
-namespace SunamoWf.Controls;
+namespace SunamoWf.Forms;
 
-    /// <summary>
-    /// Dialog with a list and Yes / No / Cancel buttons.
-    /// </summary>
     public partial class SelectFrom3ActionsForm : Form
     {
         /// <summary>
