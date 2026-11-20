@@ -1,5 +1,8 @@
 namespace SunamoWf.Forms;
 
+    /// <summary>
+    /// Represents the enter value form type.
+    /// </summary>
     public class EnterValueForm : Form
     {
 

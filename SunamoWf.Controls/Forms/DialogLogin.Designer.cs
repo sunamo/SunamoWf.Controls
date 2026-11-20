@@ -124,7 +124,16 @@ namespace SunamoWf.Forms;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        /// <summary>
+        /// The chb uloz heslo.
+        /// </summary>
         public System.Windows.Forms.CheckBox chbUlozHeslo;
+        /// <summary>
+        /// The txt login.
+        /// </summary>
         public System.Windows.Forms.TextBox txtLogin;
+        /// <summary>
+        /// The txt heslo.
+        /// </summary>
         public System.Windows.Forms.TextBox txtHeslo;
     }

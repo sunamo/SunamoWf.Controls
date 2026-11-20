@@ -1,5 +1,8 @@
 namespace SunamoWf.Forms;
 
+    /// <summary>
+    /// Represents the select from 3 actions form type.
+    /// </summary>
     public partial class SelectFrom3ActionsForm : Form
     {
         /// <summary>

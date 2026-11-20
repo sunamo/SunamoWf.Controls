@@ -2,6 +2,9 @@ namespace SunamoWf.Forms;
 
 using System.ComponentModel;
 
+    /// <summary>
+    /// Represents the enter value event form type.
+    /// </summary>
     public partial class EnterValueEventForm : Form
     {
         private Button button1;

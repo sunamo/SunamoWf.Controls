@@ -1,5 +1,8 @@
 namespace SunamoWf.Forms;
 
+    /// <summary>
+    /// Represents the dialog login type.
+    /// </summary>
     public partial class DialogLogin : Form
     {
         //bool publicSaveLogic = false;
