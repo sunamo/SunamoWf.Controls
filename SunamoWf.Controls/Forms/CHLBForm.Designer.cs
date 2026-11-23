@@ -69,5 +69,8 @@ namespace SunamoWf.Forms;
         #endregion
 
         private System.Windows.Forms.Label label1;
+        /// <summary>
+        /// The checked list box 1.
+        /// </summary>
         public System.Windows.Forms.CheckedListBox checkedListBox1;
     }

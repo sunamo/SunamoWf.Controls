@@ -1,5 +1,8 @@
 namespace SunamoWf.Forms;
 
+    /// <summary>
+    /// Represents the CHLB form type.
+    /// </summary>
     public partial class CHLBForm : Form
     {
 
